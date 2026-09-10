@@ -1,6 +1,6 @@
 # Current Research State
 
-**Updated 2026-09-10 through the package-representation work corresponding to private-lab EXP-501.** No unknown plaintext is established.
+**Updated 2026-09-10 through private-lab EXP-505.** No unknown plaintext is established.
 
 ## Canonical LP2 corpus
 
@@ -20,18 +20,24 @@ Several simple explanations were tested and rejected within scope, including pur
 
 ## Physical package / representation boundary
 
-A separate research line now provides the strongest document-architecture result.
-
 **ESTABLISHED scoped:** sequential pages `17..74` match the preserved Onion7 `0..57` image package exactly under the fixed +17 mapping, while sequential `00..16` are disjoint from that package.
 
-Two representation phenomena converge on that material boundary:
+Two representation phenomena converge cleanly on that material boundary:
 
 1. **SIGNAL strong / retrospective:** eligible GP-bearing red spans show `15/15 ⁜` before the boundary and `16/16 ⁕` after it. The simple claim that `⁕` means unresolved ciphertext is rejected because solved terminal pages also use it.
 2. **SIGNAL strong / convergent:** a physical isolated vertical two-dot punctuation class calibrated on pre-Onion7 material disappears in a frozen out-of-sample Onion7 scan. The final detector passed `72/72` synthetic positives and `0/72` synthetic negatives before scanning, then returned `0` candidates across all `58/58` pinned Onion7 JPEGs.
 
-**No cryptographic semantics follow from this.** The package boundary is not currently evidence of a key reset, cipher switch, opcode, plaintext, or cause of `K=86`.
+A third feature — double quotes — is physically real but not yet fully reconciled across both packages:
 
-See `experiments/PACKAGE_BOUNDARY_PHYSICAL_SIGNALS.md` for the reproducible reasoning and failed intermediate detector variants.
+- **ESTABLISHED scoped (EXP-502):** Rain literal `"` maps to a genuine paired-stroke quote-like physical class on a deterministic cross-package sample.
+- **REJECTED scoped (EXP-503):** classifying a whole punctuation interval as quote/non-quote is invalid because quote and word-dot can share an interval.
+- **ESTABLISHED scoped (EXP-504):** all **14/14 Onion7** Rain quote events reconcile physically; among localized groups overall, 28/29 have exact quote multiplicity and 32/33 localized events reconcile.
+- **OPEN:** 11 pre-Onion7 quote events remain unlocalized under the inherited exact-count geometry; one localized page08 interval has two Rain quote tokens but one counted physical pair.
+- **REJECTED protocol feasibility / NO TARGET RESULT (EXP-505):** a count-tolerant alternative localizer failed its calibration gate before those 11 targets were scored (25/28 exact positives; 1/10 negative false positives).
+
+**No cryptographic semantics follow from these representation results.** The package boundary is not currently evidence of a key reset, cipher switch, opcode, plaintext, or cause of `K=86`.
+
+See `experiments/PACKAGE_BOUNDARY_PHYSICAL_SIGNALS.md` for the detailed public synthesis and failed-protocol guardrails.
 
 ## Mixed document architecture
 
@@ -65,8 +71,6 @@ This proves cross-round composition exists. It does **not** imply that arbitrary
 
 The source does not itself say `SHA-512`.
 
-Current primary custody routes remain TNO / Dark Web Monitor; Portsmouth / Gareth Owenson / Searchlight Cyber; DARPA Memex / SRI LIGHTS; and Moore / Rid 2015. DUTA-private remains secondary/open.
-
 ## Public-source ceiling
 
 A bounded audit across additional public repository surfaces recovered zero new qualifying 2012–2014 source objects from the surfaces that resolved and could be inspected.
@@ -75,10 +79,12 @@ This is an **OPEN / bounded negative**, not proof that no private/deleted/unreso
 
 ## Current next question
 
-A third preregistered representation feature — the package difference in double-quote frequency — requires direct physical validation against the pinned JPEGs before it can count as another independent package-level signal.
+Rather than iterate more quote-localization heuristics, the private lab is testing a genuinely independent document-production explanation:
 
-Only after that test should a small typed glyph-inventory model be considered.
+> Do the pre-Onion7 and Onion7 materials preserve different **ordinary-rune rendering/typesetting fingerprints** even after punctuation and rubrication are excluded and rune identity is controlled?
+
+A positive held-out result would support a broader template/export/render-pipeline regime change. A powered negative would suggest that the observed discontinuities are selective annotation/punctuation phenomena rather than a global rendering change.
 
 ## Overall posture
 
-The project remains **evidence-gated rather than compute-gated**, but “new evidence” no longer means only recovering a lost external archive. It can also mean a genuinely out-of-sample prediction about the physical document that survives direct image validation.
+The project remains **evidence-gated rather than compute-gated**. The current shift is deliberate: ask what physical/document object was produced before inventing another cipher family.
