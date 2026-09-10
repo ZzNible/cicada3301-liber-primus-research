@@ -1,14 +1,14 @@
 # Package-boundary physical representation signals
 
-**Public synthesis through private-lab EXP-501 (2026-09-10).**
+**Public synthesis through private-lab EXP-505 (2026-09-10).**
 
-No unknown plaintext is established here. This note documents a change in the **physical/document representation** of Liber Primus material, not a key, opcode, cipher reset, or decoding rule.
+No unknown plaintext is established here. This note documents changes and candidate changes in the **physical/document representation** of Liber Primus material, not a key, opcode, cipher reset, or decoding rule.
 
 ## Result in one sentence
 
-Two independently measured physical representation phenomena converge on the same preserved material boundary between sequential pages 16 and 17.
+Two independently measured physical representation phenomena converge cleanly on the preserved material boundary between sequential pages 16 and 17; a third feature, double-quote morphology/frequency, is physically real and fully reconciled on Onion7 but remains incomplete on pre-Onion7 because source-position localization is unresolved for 11 events.
 
-**Status: SIGNAL strong / convergent. Mechanism and cryptographic meaning: OPEN.**
+**Overall status: SIGNAL strong for package-dependent representation; mechanism and cryptographic meaning OPEN.**
 
 ## 1. The material boundary
 
@@ -75,28 +75,105 @@ The preregistered exact-zero prediction passed.
 
 **SIGNAL strong / convergent:** the physical class that reproduces the pre-Onion7 colon morphology disappears at the material package boundary under a frozen out-of-sample test.
 
-## 4. What this changes
+## 4. Double quotes: physical identity established, full package count still open
 
-The useful conclusion is **not** that `:` is a code.
+EXP-493 had independently preregistered `quote_count` as a feature-level representation signal: Rain contains `30` literal double-quote characters on the transcribed pre-Onion7 pages and `14` on Onion7.
 
-The stronger and more conservative conclusion is that the pre-Onion7 and Onion7 materials use measurably different physical glyph/punctuation inventories, and two independently studied phenomena converge on the same preserved package boundary.
+That difference was not treated as physical evidence until the source images were checked.
 
-That supports treating Liber Primus as a document with potentially typed representation layers rather than assuming every visible convention is decorative or that every page belongs to one homogeneous representation regime.
+### EXP-502 — deterministic physical identity sample
 
-## 5. What this does not license
+The first Rain quote on each of the 13 quote-bearing pages was frozen before image adjudication, with matched word-dot controls.
+
+A first generic line localizer failed on 5/13 pages and was **not** retuned. A fallback then reused image geometry from an older independent exhaustive rune audit rather than parameters learned from quote outcomes.
+
+Result:
+
+- quote-like paired-stroke targets: `12/13`;
+- matched physical single-dot controls: `12/13`;
+- quote-like controls: `0`;
+- pre-Onion7 guard: `5/6`;
+- Onion7 guard: `7/7`;
+- page08 retained as an explicit alignment failure.
+
+The recurring quote glyph is physically distinct from the small word dot: two narrow approximately vertical strokes rather than a small square dot.
+
+**ESTABLISHED scoped:** Rain literal `"` tracks a genuine visible quote-like physical class on the deterministic cross-package sample.
+
+### EXP-503 — invalid unit of analysis caught by controls
+
+A first full-event reconciliation classified an entire inter-rune punctuation interval as quote-like whenever it contained the quote pair. That made matched word-dot controls on pages24 and60 false positives because a quote and a word dot occupy the same physical interval.
+
+The preregistered negative-control gate failed and the full 44-event score was never run.
+
+**REJECTED scoped:** interval-level quote/non-quote classification is not a valid event classifier.
+
+### EXP-504 — multiplicity-aware event grouping
+
+The next experiment grouped Rain quote tokens by inter-rune interval and compared their multiplicity with non-overlapping physical quote pairs.
+
+Controls passed:
+
+- `12/12` localized quote anchors contained a physical pair;
+- `0/10` eligible distinct-interval word-dot controls contained a quote pair;
+- the two previously known shared-interval controls were prospectively excluded from the negative set.
+
+Full frozen-manifest result:
+
+- Rain quote events: `44` in `39` grouped intervals;
+- localized quote events: `33/44`;
+- exact multiplicity groups: `28/29` localized groups;
+- reconciled localized events: `32/33`;
+- Onion7: **14/14 Rain quote events physically reconciled as 14 quote pairs**;
+- 11 pre-Onion7 events remain unlocalized under the inherited exact-count geometry;
+- one localized page08 interval contains two Rain quote tokens but only one counted physical quote pair.
+
+Because localization coverage was only `75%`, the registered full-reconciliation criterion failed.
+
+**ESTABLISHED scoped:** all 14 Onion7 Rain quote events are physically reconciled by this frozen method.
+
+**SIGNAL:** quote transcription is highly faithful among localized intervals.
+
+**OPEN / INCONCLUSIVE:** full physical `30 vs 14` package counts.
+
+### EXP-505 — do not rescue the 11 failures by tuning a locator
+
+A separate source-context locator was preregistered for the 11 unresolved pre-Onion7 events. Before those targets could be scored, it had to reproduce at least 90% of already-resolved positive groups and produce zero false positives on eligible word-dot controls.
+
+It failed both conditions narrowly:
+
+- exact positive groups: `25/28 = 0.892857`;
+- negative false positives: `1/10`.
+
+The stop rule fired. **The 11 target events were not scored.**
+
+**REJECTED — protocol feasibility / NO TARGET RESULT.** Further crop/localizer tuning is on hold unless an independently motivated source-position method appears.
+
+## 5. What this changes
+
+The useful conclusion is **not** that punctuation is a secret code.
+
+The stronger and more conservative conclusion is that the preserved material packages have real, measurable representation differences, and source-image validation is important because normalized transcriptions lose or conflate physical distinctions.
+
+The quote branch also shows why controls matter: a result can be physically real while a proposed *unit of analysis* is wrong.
+
+This supports treating Liber Primus as a document with potentially typed representation layers rather than assuming every visible convention is decorative or that every page belongs to one homogeneous representation regime.
+
+## 6. What this does not license
 
 These results do not establish:
 
 - a cipher/key reset at page 17;
-- an opcode or ASCII interpretation of the two-dot mark;
+- an opcode or ASCII interpretation of punctuation;
 - a cause for the `K=86` ciphertext anomaly;
 - plaintext;
 - a binary punctuation channel;
-- numeric semantics for community delimiter labels.
+- numeric semantics for community delimiter labels;
+- a causal claim that package membership itself determines quote frequency.
 
-Any cryptographic use of the package boundary now needs an **independent ciphertext prediction** fixed before testing.
+Any cryptographic use of the package boundary still needs an **independent ciphertext prediction** fixed before testing.
 
-## 6. Reusable methodological lesson
+## 7. Reusable methodological lesson
 
 The most useful part for other researchers may be the protocol history:
 
@@ -105,12 +182,14 @@ The most useful part for other researchers may be the protocol history:
 3. use matched punctuation controls;
 4. record localization mistakes explicitly;
 5. reject detector versions that fail held-out specificity or synthetic gates;
-6. keep the target package untouched until the detector is frozen;
-7. scan it once;
+6. keep target data unscored when the registered gate fails;
+7. distinguish a physical glyph from the logical event it represents;
 8. do not convert a representation result into crypto semantics without a new prediction.
 
 This sequence prevented several plausible-looking but invalid conclusions from being promoted.
 
 ## Current next question
 
-A third preregistered representation feature — double-quote frequency — is being physically validated separately. It should not be folded into a general punctuation grammar until that independent test is complete.
+Rather than iterating more quote-localization heuristics, the private lab is moving to an independent question: **does the pre-Onion7 / Onion7 material split extend to the rendering geometry of ordinary black GP runes when punctuation and rubrication are excluded?**
+
+That test can distinguish a broad production/template/rendering-regime change from discontinuities confined to selected annotation classes.
