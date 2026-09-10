@@ -42,6 +42,17 @@ Several visually striking secondary patterns initially appeared to support the s
 - Historical custody research for `AN END` currently concentrates on four operator-gated routes: TNO/Dark Web Monitor, Portsmouth/Searchlight, SRI/Memex, and Moore/Rid.
 - A bounded audit of public source repositories recovered **no new qualifying 2012–2014 primary object** able to reopen the current holds.
 
+## Selected experiment chains
+
+The public repository now includes concise, reusable summaries of the most important experiment chains:
+
+- [`experiments/K86_TRANSITION_SIGNAL.md`](experiments/K86_TRANSITION_SIGNAL.md) — the repeat-suppression signal and failed explanations;
+- [`experiments/PRIME_GP_VERIFIER.md`](experiments/PRIME_GP_VERIFIER.md) — the prime-GP solved-plaintext verifier and prospective holdout;
+- [`experiments/AN_END_VERIFIER_AND_CUSTODY.md`](experiments/AN_END_VERIFIER_AND_CUSTODY.md) — page-to-hash semantics, representation limits and custody work;
+- [`experiments/MIXED_DOCUMENT_ARCHITECTURE.md`](experiments/MIXED_DOCUMENT_ARCHITECTURE.md) — the layered data/control/verification framing.
+
+See [`experiments/README.md`](experiments/README.md) for the curated experiment index.
+
 ## Why so many negative results?
 
 Because publishing them saves the community time.
